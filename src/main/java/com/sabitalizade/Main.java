@@ -1,5 +1,11 @@
 package com.sabitalizade;
 
+import com.sabitalizade.models.Book;
+import com.sabitalizade.models.DVD;
+import com.sabitalizade.models.Journal;
+import com.sabitalizade.services.BookServiceImpl;
+import com.sabitalizade.services.LibraryServiceImpl;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -7,19 +13,21 @@ public class Main {
         Journal journal = new Journal(2, "Science Today", "Nature");
         DVD dvd = new DVD(3, "Inception", 148, "Christopher Nolan");
 
-        LibraryService service = new LibraryService();
+        LibraryServiceImpl service = new LibraryServiceImpl();
+        BookServiceImpl bookService = new BookServiceImpl()
 
         service.borrowItem(book);
         service.returnItem(book);
         service.displayItem(book);
-        book.displayDetailedInformation();
+        service.displayDetailedInformation(book);
+        bookService.displayDetailedInformation(book);
 
         System.out.println();
 
         service.borrowItem(journal);
         service.returnItem(journal);
         service.displayItem(journal);
-        journal.displayDetailedInformation();
+        service.displayDetailedInformation(journal);
 
 
         System.out.println();
@@ -27,7 +35,7 @@ public class Main {
         service.borrowItem(dvd);
         service.returnItem(dvd);
         service.displayItem(dvd);
-        dvd.displayDetailedInformation();
+        service.displayDetailedInformation(dvd);
 
     }
 

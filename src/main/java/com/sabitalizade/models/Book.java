@@ -1,4 +1,4 @@
-package com.sabitalizade;
+package com.sabitalizade.models;
 
 public class Book extends LibraryItem {
     private String author;

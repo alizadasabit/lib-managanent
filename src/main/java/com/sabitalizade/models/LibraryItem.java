@@ -1,6 +1,8 @@
-package com.sabitalizade;
+package com.sabitalizade.models;
 
+import lombok.Getter;
 
+@Getter
 public abstract class LibraryItem {
     protected int id;
     protected String title;
@@ -9,14 +11,4 @@ public abstract class LibraryItem {
         this.id = id;
         this.title = title;
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public abstract void displayDetailedInformation();
 }

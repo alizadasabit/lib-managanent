@@ -1,4 +1,4 @@
-package com.sabitalizade;
+package com.sabitalizade.models;
 
 public class Journal extends LibraryItem {
     private String publisher;
